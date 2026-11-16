@@ -311,7 +311,7 @@ def delete_asset(
     return None
 
 
-@router.get("/{asset_id}/qr", response_class=Response)
+@router.get("/{asset_id}/qr")
 def get_asset_qr(
     asset_id: str,
     db: Session = Depends(get_db),
