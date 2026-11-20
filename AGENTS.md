@@ -49,12 +49,12 @@ To enforce engineering rigor directly within GitHub:
 | Setting | Standard Configuration | Implementation Status |
 | :--- | :--- | :--- |
 | **Default Branch** | `main` | Configured |
-| **Squash Merging** | Enabled (preferred for clean linear history) | Configured |
+| **Squash Merging** | The only merge method. Merge commits and rebase merges are disabled | Configured |
 | **Delete Merged Branches** | Automatically delete head branches upon merge | Configured |
-| **Branch Protection** | Required status checks & PR requirement on `main` | Enforced via workflow |
-| **Dependabot Alerts** | Enabled | Configured |
-| **Secret Scanning** | Enabled on repository | Configured |
-| **Code Scanning** | Enabled via GitHub Actions | In CI roadmap |
+| **Branch Protection** | Pull request required, linear history required, approving reviews not required. A status check is not required until #8 adds CI | Configured |
+| **Dependabot Alerts** | Alerts and security updates enabled | Configured |
+| **Secret Scanning** | Enabled on repository, including push protection | Configured |
+| **Code Scanning** | CodeQL default setup for Python and JavaScript/TypeScript | Configured |
 | **Single-Developer Exception** | Do not require independent second-party approvals when operating as an autonomous solo developer/agent, but strictly require self-review and passing automated tests before merging | Standard policy |
 
 ---
